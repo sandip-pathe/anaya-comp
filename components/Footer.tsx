@@ -10,12 +10,7 @@ const Footer: React.FC = () => {
           {/* Brand Column */}
           <div className="col-span-2 lg:col-span-2 pr-8">
             <div className="flex items-center justify-center mb-2">
-              <img
-                src="/public/logo2.png"
-                alt="Anaya Logo"
-                width={100}
-                height={100}
-              />
+              <img src="/logo2.png" alt="Anaya Logo" width={100} height={100} />
             </div>
 
             <div className="mb-2 justify-center text-center">

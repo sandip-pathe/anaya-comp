@@ -47,12 +47,7 @@ const Navbar: React.FC = () => {
               to="/"
               className="flex-shrink-0 flex items-center gap-2 cursor-pointer"
             >
-              <img
-                src="/public/logo2.png"
-                alt="Anaya Logo"
-                width={28}
-                height={28}
-              />
+              <img src="/logo2.png" alt="Anaya Logo" width={28} height={28} />
               <span className="font-semibold text-2xl tracking-tight text-white">
                 Anaya
               </span>
