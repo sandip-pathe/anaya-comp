@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Sitemap: https://anaya.legal/sitemap.xml
+
+# Disallow admin or private routes if any
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
