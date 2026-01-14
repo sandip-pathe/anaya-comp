@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 40);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -21,7 +21,13 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="bg-[#1A1C25] border-b border-anaya-border text-anaya-muted text-[11px] font-medium py-2 text-center px-4 tracking-wide z-50 relative uppercase">
+      {/* Banner - slides under navbar when scrolling */}
+      <div
+        className={`fixed w-full bg-[#1A1C25] border-b border-anaya-border text-anaya-muted text-[11px] font-medium py-2 text-center px-4 tracking-wide uppercase transition-all duration-200 ${
+          isScrolled ? "-translate-y-full" : "translate-y-0"
+        }`}
+        style={{ zIndex: 30 }}
+      >
         <span className="text-anaya-blue font-bold mr-2">New</span> RBI
         announces OMO Purchase of Government of India Securities
         <a
@@ -33,12 +39,15 @@ const Navbar: React.FC = () => {
           Read More &rarr;
         </a>
       </div>
+
+      {/* Navbar - stacks on top of banner */}
       <nav
-        className={`fixed w-full z-40 transition-all duration-300 border-b ${
+        className={`fixed w-full transition-all duration-200 border-b ${
           isScrolled
-            ? "bg-anaya-dark/95 backdrop-blur-md border-anaya-border py-3"
-            : "bg-transparent border-transparent py-4"
+            ? "top-0 bg-anaya-dark/98 backdrop-blur-md border-anaya-border py-3 shadow-lg"
+            : "top-[36px] bg-anaya-dark/80 backdrop-blur-sm border-transparent py-4"
         }`}
+        style={{ zIndex: 40 }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
