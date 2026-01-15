@@ -17,24 +17,28 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: "About", path: "/about", hasDropdown: false },
     { name: "Blog", path: "/blog", hasDropdown: false },
+    { name: "Developers", path: "/developer", hasDropdown: false },
   ];
 
   return (
     <>
       {/* Banner - slides under navbar when scrolling */}
       <div
-        className={`fixed w-full bg-[#1A1C25] border-b border-anaya-border text-anaya-muted text-[11px] font-medium py-2 text-center px-4 tracking-wide uppercase transition-all duration-200 ${
+        className={`fixed w-full bg-[#1A1C25] border-b border-anaya-border text-anaya-muted text-[9px] sm:text-[11px] font-medium py-2 text-center px-2 sm:px-4 tracking-wide uppercase transition-all duration-200 ${
           isScrolled ? "-translate-y-full" : "translate-y-0"
         }`}
         style={{ zIndex: 30 }}
       >
-        <span className="text-anaya-blue font-bold mr-2">New</span> RBI
-        announces OMO Purchase of Government of India Securities
+        <span className="text-anaya-blue font-bold mr-1 sm:mr-2">New</span>
+        <span className="hidden sm:inline">
+          RBI announces OMO Purchase of Government of India Securities
+        </span>
+        <span className="inline sm:hidden">RBI OMO Purchase Announcement</span>
         <a
           href="https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62043"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-anaya-blue font-bold ml-8"
+          className="text-anaya-blue font-bold ml-2 sm:ml-8"
         >
           Read More &rarr;
         </a>

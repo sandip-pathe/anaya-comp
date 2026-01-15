@@ -18,10 +18,8 @@ const Subscribe: React.FC = () => {
               className="flex items-center gap-2.5 cursor-pointer"
               onClick={() => navigate("/")}
             >
-              <div className="w-7 h-7 bg-anaya-blue rounded-[4px] flex items-center justify-center">
-                <div className="w-3.5 h-3.5 border-[1.5px] border-white transform rotate-45"></div>
-              </div>
-              <span className="font-semibold text-lg tracking-tight text-white">
+              <img src="/logo2.png" alt="Anaya Logo" width={28} height={28} />
+              <span className="font-semibold text-2xl tracking-tight text-white">
                 Anaya
               </span>
             </div>

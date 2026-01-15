@@ -5,6 +5,7 @@ import App from "./App";
 import Subscribe from "./pages/Subscribe";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import Developers from "./pages/Developers";
 
 const rootElement = document.getElementById("root");
 if (!rootElement) {
@@ -20,6 +21,8 @@ root.render(
         <Route path="/subscribe" element={<Subscribe />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="*" element={<div>404 Not Found</div>} />
+        <Route path="developer" element={<Developers />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
